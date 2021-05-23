@@ -1,0 +1,6 @@
+\babel@toc {russian}{}
+\contentsline {chapter}{Введение}{2}{section*.2}%
+\contentsline {chapter}{\numberline {1.}Название первой главы.}{3}{chapter.1}%
+\contentsline {chapter}{Выводы}{5}{section*.5}%
+\contentsline {chapter}{Заключение}{6}{section*.7}%
+\contentsline {chapter}{Cписок литературы}{7}{section*.9}%

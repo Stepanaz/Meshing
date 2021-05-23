@@ -1,0 +1,11 @@
+\babel@toc {russian}{}
+\contentsline {chapter}{Мотивация}{3}{chapter*.1}%
+\contentsline {section}{\numberline {0.1}Модель}{5}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Изменение свободной энергии системы}{7}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Матрица ёмкостей}{9}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Потенциалы и заряды системы концентрических проводящих сфер}{10}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Расчёт темпа туннелирования}{12}{section.0.5}%
+\contentsline {section}{\numberline {0.6}Граф состояний двухуровневой системы}{13}{section.0.6}%
+\contentsline {section}{\numberline {0.7}Система кинетических уравнений}{14}{section.0.7}%
+\contentsline {section}{\numberline {0.8}Расчёт транспортных характеристик}{16}{section.0.8}%
+\contentsline {chapter}{Cписок литературы}{17}{equation.0.8.36}%

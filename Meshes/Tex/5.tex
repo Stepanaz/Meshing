@@ -1,0 +1,180 @@
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+\section{Потенциалы и заряды системы концентрических проводящих сфер}
+
+Пусть имеется система проводящих концентрических сфер с радиусами 
+$r_1<r_2<\dots<r_N$ и зарядами $q_i$. Тогда потенциал внешней сферы по теореме 
+Остроградского-Гаусса определяется как
+\begin{equation}
+  \varphi_N=\frac{\sum\limits_{i=1}^Nq_i}{r_N}\,.
+\end{equation}
+
+Потенциал $N-1$ сферы определяется как
+\begin{equation}
+  \varphi_N=\frac{\sum\limits_{i=1}^{N-1}q_i}{r_{N-1}}+C_{N-1}\,,
+\end{equation}
+где константа $C_{N-1}$ определяется из условия
+\begin{equation}
+ \frac{\sum\limits_{i=1}^{N-1}q_i}{r_{N}}+C_{N-1}=
+ \frac{\sum\limits_{i=1}^Nq_i}{r_N},\;
+  C_{N-1}=\frac{q_N}{r_N}
+\end{equation}
+
+Таким образом, потенциалы и заряды на $N$ концентрических сферах определены 
+равенством:
+\begin{equation}
+  \left(
+  \begin{array}{c}
+    \vec \varphi_1\\
+    \vdots\\
+    \vec \varphi_N
+  \end{array}
+  \right)=
+  \left(
+  \begin{array}{ccccccc}
+1/r_1 & 1/r_2 & 1/r_3 & \ldots & 1/r_{N-2} & 1/r_{N-1} & 1/r_N\\
+1/r_2 & 1/r_2 & 1/r_3 & \ldots & 1/r_{N-2} & 1/r_{N-1} & 1/r_N\\
+1/r_3 & 1/r_3 & 1/r_3 & \ldots & 1/r_{N-2} & 1/r_{N-1} & 1/r_N\\
+\vdots & \vdots & \vdots & \ldots & \vdots & \vdots & \vdots\\
+1/r_{N-2} & 1/r_{N-2} & 1/r_{N-2} & \ldots & 1/r_{N-2} & 1/r_{N-1} & 1/r_N\\
+1/r_{N-1} & 1/r_{N-1} & 1/r_{N-1} & \ldots & 1/r_{N-1} & 1/r_{N-1} & 1/r_N\\    
+1/r_N & 1/r_N & 1/r_N & \ldots & 1/r_N & 1/r_N & 1/r_N\\
+  \end{array}
+  \right)
+  \left(
+  \begin{array}{c}
+    \vec q_1\\
+    \vdots\\
+    \vec q_N
+  \end{array}
+  \right)\,.
+\end{equation}
+Элементы потенциальной матрицы в этой системе определяются как
+\begin{equation}
+  S_{ij}=
+  \left\{
+  \begin{array}{c}
+    1/r_i\;\mbox{если}\;i>j,\\
+    1/r_j\;\mbox{если}\;i\le j.
+  \end{array}
+  \right.
+\end{equation}
+
+\section{Изменение свободной энергии системы}
+
+Изменение электростатической энергии запишем в виде
+\begin{equation}
+  dU = 
+  \frac{\vec{\varphi_{f}^T}\vec{q}_{f}-\vec{\varphi_{i}^T}\vec{q}_{i}}{2}=
+  \frac{(\vec{\varphi_{i}^T}+\vec{d\varphi^T})
+  (\vec{q}_{i}+d\vec{q})
+  -\vec{\varphi_{i}^T}\vec{q}_{i}}{2}
+\end{equation}
+Заметим, поскольку электроды поддерживаются при постоянном потенциале, то 
+вектор изменения потенциалов всех элементов 
+\begin{equation}
+  d\vec{\varphi}=
+  \vec{\varphi}_{\mbox{f}}-\vec{\varphi}_{\mbox{i}}=
+  \left(
+  \begin{array}{c}
+   \vec 0_e\\
+   d\vec \varphi_d
+  \end{array}
+  \right)
+\end{equation}
+Вектор изменения зарядов всех элементов 
+\begin{equation}
+  d\vec{q}=
+  \vec{q}_{\mbox{f}}-\vec{q}_{\mbox{i}}=
+  \left(
+  \begin{array}{c}
+   d\vec q_{ind}+d\vec q_{tun}\\
+   d\vec q_d
+  \end{array}
+  \right)=
+  \left(
+  \begin{array}{c}
+   d\vec q_{ind}+ed\vec n_{tun}\\
+   ed\vec n_d
+  \end{array}
+  \right)
+\end{equation}
+
+Выражение для изменения свободной энергии можно переписать в следующем 
+виде с учетом неизменности электрических потенциалов электродов
+\begin{equation}
+  dU = \frac{\vec{\varphi}^T_{\mbox{i}}d\vec{q}+
+  \vec{q}^T_{\mbox{i}}d\vec{\varphi}+
+  d\vec{q}^Td\vec{\varphi}}{2}=
+  \frac{(\vec{q}^T_d+d\vec{q}^T_d)d\vec{\varphi}_d+
+  \vec{\varphi}_d^Td\vec{q}_d+
+  \vec{\varphi}_e^Td\vec{q}_{ind}}{2}
+\end{equation}
+Для нахождения $d\vec q_{ind}$, $\vec{\varphi}_d$ и 
+$d\vec{\varphi}_d$ запишем систему уравнений
+\begin{equation}
+  \left(
+  \begin{array}{c}
+   \vec q_{ind}\\
+   \vec q_d
+  \end{array}
+  \right)=
+  \left(
+  \begin{array}{cc}
+   \hat C_{ee} & \hat C_{ed}\\
+   \hat C_{de} & \hat C_{dd}
+  \end{array}
+  \right)
+  \left(
+  \begin{array}{c}
+   \vec \varphi_e\\
+   \vec \varphi_d
+  \end{array}
+  \right)
+\end{equation}
+откуда получаем
+\begin{equation}
+  \begin{array}{l}
+   \vec \varphi_d=\hat C^{-1}_{dd}
+   (\vec{q}_d-\hat C_{de}\vec \varphi_e)\\
+   \vec q_{ind}=(\hat C_{ee}-\hat C_{ed}\hat C^{-1}_{dd}\hat C_{de})\varphi_e+
+   \hat C_{ed}\hat C^{-1}_{dd}\vec q_d.
+  \end{array}
+\end{equation}
+На основе этих уравнений для $d\vec q_{ind}$ и 
+$d\vec{\varphi}_d$ получаем:
+\begin{equation}
+  \begin{array}{l}
+   d\vec \varphi_d=\hat C^{-1}_{dd}d\vec{q}_d\\
+   d\vec q_{ind}=
+   \hat C_{ed}\hat C^{-1}_{dd}d\vec q_d.
+  \end{array}
+\end{equation}
+Получаем для изменения электростатической энергии
+\begin{equation}
+  dU = 
+  \frac{(\vec{q}^T_d+d\vec{q}^T_d)\hat C^{-1}_{dd}d\vec{q}_d+
+  (\vec{q}_d^T-\vec \varphi_e^T\hat C_{ed})\hat C^{-1}_{dd}d\vec{q}_d+
+  \vec{\varphi}_e^T\hat C_{ed}\hat C^{-1}_{dd}d\vec q_d}{2}
+\end{equation}
+Окончательно изменения электростатической энергии:
+\begin{equation}
+  dU = \vec{q}^T_d\hat C^{-1}_{dd}d\vec{q}_d+
+  \frac{d\vec{q}^T_d\hat C^{-1}_{dd}d\vec{q}_d}{2}=
+  e^2\vec{n}^T_d\hat C^{-1}_{dd}d\vec{n}_d+
+  \frac{e^2}{2}d\vec{n}^T_d\hat C^{-1}_{dd}d\vec{n}_d
+\end{equation}
+Изменение свободной энергии системы включает в себя работу источников
+\begin{equation}
+ dF=dU + U=e^2\vec{n}^T_d\hat C^{-1}_{dd}d\vec{n}_d+
+  \frac{e^2}{2}d\vec{n}^T_d\hat C^{-1}_{dd}d\vec{n}_d+
+  e\vec \varphi_e^T(\hat C_{ed}\hat C^{-1}_{dd}d\vec{n}_d+d\vec{n}_{tun})
+\end{equation}
+\end{document}

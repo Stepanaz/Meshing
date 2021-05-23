@@ -1,0 +1,9 @@
+\babel@toc {russian}{}
+\contentsline {section}{Мотивация}{2}{Doc-Start}%
+\contentsline {section}{Модель}{3}{Doc-Start}%
+\contentsline {section}{Изменение свободной энергии системы}{5}{figure.0.2}%
+\contentsline {section}{Темп туннелирования}{7}{equation.0.0.12}%
+\contentsline {section}{Граф состояний}{8}{equation.0.0.17}%
+\contentsline {section}{Обсуждение результатов}{9}{equation.0.0.18}%
+\contentsline {section}{Итоги}{10}{figure.0.11}%
+\contentsline {section}{Cписок литературы}{12}{figure.0.12}%
